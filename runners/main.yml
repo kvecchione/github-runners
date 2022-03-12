@@ -1,0 +1,7 @@
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: Runner
+metadata:
+  name: github-runners-test-2
+spec:
+  repository: kvecchione/github-runners
+  env: []

@@ -1,5 +1,4 @@
 FROM alpine:latest
-RUN apk add python3 py3-pip
-RUN pip3 install requests
+RUN apk update
 ADD test.py /test.py
 ENTRYPOINT ["tail", "-f", "/dev/null"]
