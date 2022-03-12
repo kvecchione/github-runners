@@ -1,7 +1,11 @@
 apiVersion: actions.summerwind.dev/v1alpha1
-kind: Runner
+kind: RunnerDeployment
 metadata:
-  name: github-runners-test-2
+  name: kubernetes-runner
 spec:
-  repository: kvecchione/github-runners
-  env: []
+  replicas: 1
+  template:
+    spec:
+      repository: kvecchione/github-runners
+      labels:
+        - kubernetes
